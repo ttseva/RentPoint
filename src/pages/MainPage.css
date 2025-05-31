@@ -4,6 +4,7 @@
   flex-direction: column;
 }
 
+<<<<<<< HEAD
 .main-page-layout > header,
 .main-page-layout > footer {
   flex-shrink: 0;
@@ -12,6 +13,11 @@
 .main-page {
   flex: 1;
   padding: 48px 0 32px;
+=======
+.main-page {
+  flex: 1;
+  padding: 32px 0;
+>>>>>>> 8303a6a00af7c3b9aa02f38713d50a0b19d0ca8a
 }
 
 .main-page__content {
@@ -55,6 +61,7 @@
   flex-direction: column;
   gap: 16px;
   margin-bottom: 40px;
+<<<<<<< HEAD
   list-style: none;
   padding: 0;
 }
@@ -65,11 +72,17 @@
   font-size: 16px;
   line-height: 24px;
   padding: 40px 0;
+=======
+>>>>>>> 8303a6a00af7c3b9aa02f38713d50a0b19d0ca8a
 }
 
 @media (max-width: 1024px) {
   .main-page {
+<<<<<<< HEAD
     padding: 32px 0 24px;
+=======
+    padding: 24px 0;
+>>>>>>> 8303a6a00af7c3b9aa02f38713d50a0b19d0ca8a
   }
   
   .main-page__content {
@@ -79,7 +92,11 @@
 
 @media (max-width: 600px) {
   .main-page {
+<<<<<<< HEAD
     padding: 24px 0 16px;
+=======
+    padding: 16px 0;
+>>>>>>> 8303a6a00af7c3b9aa02f38713d50a0b19d0ca8a
   }
 
   .main-title {
