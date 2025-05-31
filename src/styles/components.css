@@ -1,0 +1,89 @@
+/* Common button styles */
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    height: 40px;
+    padding: 0 var(--spacing-xl);
+    border: none;
+    border-radius: var(--radius-round);
+    font-family: var(--font-main);
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.button--primary {
+    background: var(--color-accent);
+    color: var(--color-primary);
+}
+
+.button--primary:hover {
+    background: var(--color-accent-hover);
+}
+
+.button--secondary {
+    background: var(--color-secondary);
+    color: var(--color-text);
+}
+
+.button--secondary:hover {
+    background: var(--color-accent);
+    color: var(--color-primary);
+}
+
+.button--ghost {
+    background: transparent;
+    color: var(--color-text-secondary);
+}
+
+.button--ghost:hover {
+    background: var(--color-secondary);
+}
+
+/* Common input styles */
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    background: var(--color-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    height: 40px;
+}
+
+.input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: var(--font-main);
+    font-size: var(--font-size-md);
+    color: var(--color-text);
+    width: 100%;
+}
+
+.input::placeholder {
+    color: var(--color-text-secondary);
+    opacity: 0.5;
+}
+
+/* Common layout styles */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    .button {
+        padding: 0 var(--spacing-lg);
+    }
+} 

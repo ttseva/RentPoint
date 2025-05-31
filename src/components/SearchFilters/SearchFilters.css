@@ -1,0 +1,221 @@
+.filters {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.filters__main {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    flex: 1 1 auto;
+}
+
+.filters__range {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.filters__input-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    background: var(--color-primary);
+    border: 1px solid #e7e7e7;
+    border-radius: var(--spacing-sm);
+    padding: 2px var(--spacing-sm);
+    height: 32px;
+    min-width: 120px;
+    flex: 1;
+}
+
+.filters__icon {
+    font-size: 18px;
+    margin-right: 2px;
+}
+
+.filters__label {
+    color: var(--color-subtext);
+    opacity: 0.5;
+    font-size: var(--font-size-sm);
+}
+
+.filters__input {
+    border: none;
+    outline: none;
+    font-size: var(--font-size-sm);
+    width: 80px;
+    background: transparent;
+    height: 24px;
+}
+
+.filters__rooms {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    height: 40px;
+    border: 1px solid #e7e7e7;
+    border-radius: var(--spacing-xs);
+    overflow: hidden;
+    background: var(--color-primary);
+}
+
+.filters__rooms-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 var(--spacing-sm);
+    border-right: 1px solid #e7e7e7;
+}
+
+.filters__room-btn {
+    background: var(--color-primary);
+    border: none;
+    border-right: 1px solid #e7e7e7;
+    border-radius: 0;
+    padding: 0 var(--spacing-md);
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    height: 100%;
+    position: relative;
+}
+
+.filters__room-btn:last-child {
+    border-right: none;
+}
+
+.filters__room-btn--active {
+    background: var(--color-accent);
+    color: var(--color-primary);
+}
+
+.filters__room-btn:hover:not(.filters__room-btn--active) {
+    background: var(--color-secondary);
+}
+
+.filters__room-icon {
+    font-size: 18px;
+}
+
+.filters__reset {
+    background: var(--color-primary);
+    border: 1px solid #e7e7e7;
+    border-radius: 20px;
+    padding: 0 var(--spacing-md);
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    cursor: pointer;
+    margin-left: var(--spacing-xs);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    transition: background 0.2s, color 0.2s;
+    justify-content: center;
+}
+
+.filters__reset:hover {
+    background: var(--color-secondary);
+    color: var(--color-accent);
+    border-color: var(--color-secondary);
+}
+
+.filters__reset-icon {
+    opacity: 0.6;
+}
+
+.filters__reset:hover .filters__reset-icon {
+    opacity: 1;
+}
+
+.filters__search-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+    margin-left: 24px;
+}
+
+.filters__search {
+    background: #617afa;
+    border: none;
+    border-radius: 20px;
+    padding: 0 32px;
+    font-size: 14px;
+    color: #f7fafc;
+    font-weight: 700;
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(60, 60, 130, 0.03);
+    justify-content: center;
+}
+
+.filters__search-icon {
+    font-size: 18px;
+}
+
+.filters__search:hover {
+    background: #4256b2;
+}
+
+@media (max-width: 900px) {
+    .filters {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 10px 8px;
+    }
+
+    .filters__main {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .filters__range {
+        width: 100%;
+    }
+
+    .filters__input-group {
+        flex: 1;
+    }
+
+    .filters__input {
+        width: 100%;
+    }
+
+    .filters__search-wrap {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .filters__search {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .filters__rooms {
+        width: 100%;
+    }
+
+    .filters__room-btn {
+        flex: 1 1 0;
+        min-width: 0;
+        width: 100%;
+        padding: 0 0;
+    }
+}
