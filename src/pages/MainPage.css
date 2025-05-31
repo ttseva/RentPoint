@@ -4,6 +4,11 @@
   flex-direction: column;
 }
 
+.main-page-layout > header,
+.main-page-layout > footer {
+  flex-shrink: 0;
+}
+
 .main-page {
   flex: 1;
   padding: 48px 0 32px;
@@ -50,6 +55,16 @@
   flex-direction: column;
   gap: 16px;
   margin-bottom: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.property-list__empty {
+  text-align: center;
+  color: var(--color-text-secondary, #47579e);
+  font-size: 16px;
+  line-height: 24px;
+  padding: 40px 0;
 }
 
 @media (max-width: 1024px) {

@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import "./MainPage.css";
-
-import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/Header";
 import SearchFilters from "../components/SearchFilters/SearchFilters";
 import { PropertyCard } from "../components/PropertyCard/PropertyCard";
 import propertiesData from "../data/properties.json";
@@ -63,12 +60,10 @@ const MainPage = () => {
   };
 
   const filterProperties = (property: Property) => {
-    // Фильтрация по городу
     if (property.address[0] !== filters.city) {
       return false;
     }
 
-    // Фильтрация по цене
     if (filters.priceFrom !== null && property.payment < filters.priceFrom) {
       return false;
     }
@@ -76,7 +71,6 @@ const MainPage = () => {
       return false;
     }
 
-    // Фильтрация по комнатам
     if (filters.rooms.length > 0 && !filters.rooms.includes(property.rooms)) {
       return false;
     }
@@ -87,33 +81,29 @@ const MainPage = () => {
   const properties = propertiesData.properties as Property[];
 
   return (
-    <div className="main-page-layout">
-      <Header />
-      <div className="main-page">
-        <div className="main-page__content">
-          <h1 className="main-title">
-            Сдача квартир в{" "}
-            <button
-              className="main-title__city"
-              type="button"
-              onClick={handleCityClick}
-            >
-              {citiesInCase[cities[cityIndex]]}
-            </button>
-          </h1>
-          <SearchFilters onSubmit={handleFiltersSubmit} />
-          <main className="main-content">
-            <div className="property-list">
-              {properties
-                .filter(filterProperties)
-                .map(property => (
-                  <PropertyCard key={property.id} {...property} />
-                ))}
-            </div>
-          </main>
-        </div>
+    <div className="main-page">
+      <div className="main-page__content">
+        <h1 className="main-title">
+          Аренда квартир в{" "}
+          <button
+            className="main-title__city"
+            type="button"
+            onClick={handleCityClick}
+          >
+            {citiesInCase[cities[cityIndex]]}
+          </button>
+        </h1>
+        <SearchFilters onSubmit={handleFiltersSubmit} />
+        <main className="main-content">
+          <div className="property-list">
+            {properties
+              .filter(filterProperties)
+              .map(property => (
+                <PropertyCard key={property.id} {...property} />
+              ))}
+          </div>
+        </main>
       </div>
-      <Footer />
     </div>
   );
 };
