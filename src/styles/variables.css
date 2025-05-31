@@ -1,11 +1,25 @@
 /* src/styles/variables.css */
 
+@font-face {
+    font-family: 'Manrope';
+    src: url('../assets/fonts/Manrope-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: regular;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../assets/fonts/Manrope-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: bold;
+}
 :root {
-    --color-primary: ;
-    --color-secondary: ;
-    --color-accent: ;
-    --color-text: ;
-    --color-background: #ffffff;
+    --color-primary: #fff;
+    --color-secondary: #E5E8F5;
+    --color-accent: #617AFA;
+    --color-text: #0D0F1C;
+    --color-subtext: #47579E;
+    --color-background: #F7FAFC;
 
 
     --spacing-xs: 4px;
@@ -15,7 +29,11 @@
     --spacing-xl: 32px;
 
 
-    --font-main: 'Roboto', sans-serif;
-    --font-size-base: 16px;
-    --font-size-lg: 20px;
+    --font-main: 'Manrope', sans-serif;
+    --font-size-sm: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 22px;
+    --font-size-xl: 36px;
 }
+
+

@@ -1,0 +1,10 @@
+@import './variables.css';
+
+html, body {
+  font-family: var(--font-main);
+  background: var(--color-background);
+  margin: 0;
+  padding: 0;
+  color: var(--color-text);
+  min-height: 100vh;
+}
