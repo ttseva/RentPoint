@@ -1,0 +1,161 @@
+.property-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.2s;
+
+}
+
+.property-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background: var(--color-primary, #fff);
+}
+
+.property-card__content {
+    display: flex;
+    padding: 24px;
+    gap: 24px;
+}
+
+.property-card__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.property-card__details {
+    color: var(--color-text-secondary, #47579e);
+    font-size: 14px;
+    line-height: 21px;
+    font-family: var(--font-main, 'Manrope');
+    font-weight: 400;
+}
+
+.property-card__title {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--color-text, #0d0f1c);
+    font-family: var(--font-main, 'Manrope');
+}
+
+.property-card__address {
+    color: var(--color-text-secondary, #47579e);
+    font-size: 14px;
+    line-height: 21px;
+    font-family: var(--font-main, 'Manrope');
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.property-card__price {
+    margin-top: 16px;
+    background: var(--color-secondary, #e5e8f5);
+    border-radius: 16px;
+    padding: 6px 16px;
+    color: var(--color-text, #0d0f1c);
+    font-size: 14px;
+    line-height: 21px;
+    font-family: var(--font-main, 'Manrope');
+    font-weight: 500;
+    display: inline-flex;
+    align-self: flex-start;
+}
+
+.property-card__image {
+    width: 320px;
+    height: 171px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--color-secondary, #e5e8f5);
+}
+
+.property-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property-card__actions {
+    display: flex;
+    gap: 12px;
+    padding: 0 24px 24px;
+}
+
+.property-card__action-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--color-text-secondary, #47579e);
+    font-size: 13px;
+    line-height: 20px;
+    font-family: var(--font-main, 'Manrope');
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.property-card__action-icon {
+    width: 18px;
+    height: 16px;
+    transition: all 0.2s;
+}
+
+.property-card__action-btn:hover {
+    background: var(--color-secondary, #e5e8f5);
+}
+
+.property-card__action-btn--favorite {
+    color: var(--color-accent, #617afa);
+}
+
+.property-card__action-btn--favorite.is-active {
+    color: var(--color-accent, #47579e);
+}
+
+.property-card__action-btn--delete {
+    color: var(--color-error, #ff4d4d);
+}
+
+.property-card__action-btn--delete:hover {
+    background: var(--color-error-light, #ffe5e5);
+}
+
+@media (max-width: 768px) {
+    .property-card__content {
+        padding: 16px;
+        gap: 16px;
+        flex-direction: column-reverse;
+    }
+
+    .property-card__info {
+        gap: 4px;
+    }
+
+    .property-card__image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .property-card__actions {
+        padding: 0 16px 16px;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+
+    .property-card__action-btn {
+        flex: 0 0 auto;
+    }
+}

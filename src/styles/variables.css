@@ -13,13 +13,15 @@
     font-weight: 600;
     font-style: bold;
 }
+
 :root {
-    --color-primary: #fff;
+    --color-primary: #FFFFFF;
     --color-secondary: #E5E8F5;
     --color-accent: #617AFA;
     --color-text: #0D0F1C;
     --color-subtext: #47579E;
     --color-background: #F7FAFC;
+    --color-outline: #e7e7e7;
 
 
     --spacing-xs: 4px;
@@ -35,5 +37,3 @@
     --font-size-lg: 22px;
     --font-size-xl: 36px;
 }
-
-
