@@ -13,7 +13,7 @@
 .rent-out__title {
   font-family: var(--font-main);
   font-size: var(--font-size-xl);
-  font-weight: 700;
+ font-weight: bold;
   color: var(--color-text);
   margin: 0 0 var(--spacing-xl) 0;
 }
@@ -43,7 +43,7 @@
   padding: var(--spacing-md);
   font-family: var(--font-main);
   font-size: var(--font-size-md);
-  font-weight: 700;
+ font-weight: bold;
   color: var(--color-primary);
   cursor: pointer;
   transition: opacity 0.2s;

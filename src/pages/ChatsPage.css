@@ -1,0 +1,4 @@
+.chats-page {
+    height: calc(100vh - 65px); /* Вычитаем высоту хедера */
+    background: var(--color-primary);
+} 

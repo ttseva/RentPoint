@@ -21,6 +21,7 @@ interface PropertyCardProps {
     address: [PropertyAddress['city'], PropertyAddress['address']];
     photos: string[];
     author: "user" | "server";
+    isInChat?: boolean;
     onLikeClick?: () => void;
     onMessageClick?: () => void;
     onDetailsClick?: () => void;
@@ -32,6 +33,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = (props) => {
         onLikeClick,
         onMessageClick,
         onDetailsClick,
+        isInChat = false,
         ...baseProps
     } = props;
 
@@ -42,32 +44,44 @@ export const PropertyCard: React.FC<PropertyCardProps> = (props) => {
 
     return (
         <BasePropertyCard {...baseProps}>
-            <button 
-                type="button" 
-                className={`property-card__action-btn property-card__action-btn--favorite ${isLiked ? 'is-active' : ''}`}
-                onClick={handleFavoriteClick}
-            >
-                <img 
-                    src={isLiked ? likeIconActive : likeIcon} 
-                    alt="Like" 
-                    className="property-card__action-icon"
-                />
-            </button>
-            <button
-                type="button"
-                className="property-card__action-btn property-card__action-btn--message"
-                onClick={onMessageClick}
-            >
-                <img src={messageIcon} alt="Написать" />
-                <span>Написать</span>
-            </button>
-            <button
-                type="button"
-                className="property-card__action-btn property-card__action-btn--details"
-                onClick={onDetailsClick}
-            >
-                <span>Детали</span>
-            </button>
+            {isInChat ? (
+                <button
+                    type="button"
+                    className="property-card__action-btn property-card__action-btn--details"
+                    onClick={onDetailsClick}
+                >
+                    <span>Детали</span>
+                </button>
+            ) : (
+                <>
+                    <button 
+                        type="button" 
+                        className={`property-card__action-btn property-card__action-btn--favorite ${isLiked ? 'is-active' : ''}`}
+                        onClick={handleFavoriteClick}
+                    >
+                        <img 
+                            src={isLiked ? likeIconActive : likeIcon} 
+                            alt="Like" 
+                            className="property-card__action-icon"
+                        />
+                    </button>
+                    <button
+                        type="button"
+                        className="property-card__action-btn property-card__action-btn--message"
+                        onClick={onMessageClick}
+                    >
+                        <img src={messageIcon} alt="Написать" />
+                        <span>Написать</span>
+                    </button>
+                    <button
+                        type="button"
+                        className="property-card__action-btn property-card__action-btn--details"
+                        onClick={onDetailsClick}
+                    >
+                        <span>Детали</span>
+                    </button>
+                </>
+            )}
         </BasePropertyCard>
     );
 };

@@ -3,19 +3,18 @@
 @font-face {
     font-family: 'Manrope';
     src: url('../assets/fonts/Manrope-Regular.ttf') format('truetype');
-    font-weight: 400;
+    font-weight: regular;
     font-style: regular;
 }
 
 @font-face {
     font-family: 'Manrope';
     src: url('../assets/fonts/Manrope-Bold.ttf') format('truetype');
-    font-weight: 600;
+    font-weight: bold;
     font-style: bold;
 }
 
 :root {
-<<<<<<< HEAD
     --color-primary: #FFFFFF;
     --color-secondary: #E5E8F5;
     --color-accent: #617AFA;
@@ -23,22 +22,8 @@
     --color-subtext: #47579E;
     --color-background: #F7FAFC;
     --color-outline: #e7e7e7;
-=======
-    /* Colors */
-    --color-primary: #fff;
-    --color-secondary: #E5E8F5;
-    --color-accent: #617afa;
-    --color-accent-hover: #4256b2;
-    --color-accent-light: #eef0ff;
-    --color-text: #0d0f1c;
-    --color-text-secondary: #47579e;
-    --color-error: #ff4d4d;
-    --color-error-light: #ffe5e5;
-    --color-border: #e7e7e7;
-    --color-background: #f7fafc;
->>>>>>> 8303a6a00af7c3b9aa02f38713d50a0b19d0ca8a
 
-    /* Typography */
+    /* Типография */
     --font-main: 'Manrope', sans-serif;
     --font-size-xs: 12px;
     --font-size-sm: 13px;
@@ -48,7 +33,7 @@
     --font-size-xxl: 24px;
     --font-size-title: 32px;
 
-    /* Spacing */
+    /* Отступы */
     --spacing-xs: 4px;
     --spacing-sm: 8px;
     --spacing-md: 12px;
@@ -56,26 +41,16 @@
     --spacing-xl: 24px;
     --spacing-xxl: 32px;
 
-    /* Border Radius */
+    /* Радиусы */
     --radius-sm: 6px;
     --radius-md: 8px;
     --radius-lg: 12px;
     --radius-xl: 16px;
     --radius-round: 9999px;
 
-<<<<<<< HEAD
     --font-main: 'Manrope', sans-serif;
     --font-size-sm: 14px;
     --font-size-md: 16px;
     --font-size-lg: 22px;
     --font-size-xl: 36px;
-=======
-    /* Shadows */
-    --shadow-sm: 0 2px 8px rgba(60, 60, 130, 0.03);
-    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
-
-    /* Transitions */
-    --transition-fast: 0.2s;
-    --transition-normal: 0.3s;
->>>>>>> 8303a6a00af7c3b9aa02f38713d50a0b19d0ca8a
 }

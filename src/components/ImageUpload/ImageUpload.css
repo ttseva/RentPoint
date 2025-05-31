@@ -18,7 +18,7 @@
 .image-upload__title {
   font-family: var(--font-main);
   font-size: 18px;
-  font-weight: 700;
+ font-weight: bold;
   color: var(--color-text);
   margin: 0;
 }
@@ -36,7 +36,7 @@
   padding: var(--spacing-sm) var(--spacing-xl);
   font-family: var(--font-main);
   font-size: var(--font-size-sm);
-  font-weight: 700;
+ font-weight: bold;
   color: var(--color-text);
   cursor: pointer;
   transition: background-color 0.2s;

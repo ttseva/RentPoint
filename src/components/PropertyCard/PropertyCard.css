@@ -29,13 +29,13 @@
     font-size: 14px;
     line-height: 21px;
     font-family: var(--font-main, 'Manrope');
-    font-weight: 400;
+    font-weight: regular;
 }
 
 .property-card__title {
     font-size: 16px;
     line-height: 20px;
-    font-weight: 700;
+   font-weight: bold;
     margin: 0;
     color: var(--color-text, #0d0f1c);
     font-family: var(--font-main, 'Manrope');
@@ -46,7 +46,7 @@
     font-size: 14px;
     line-height: 21px;
     font-family: var(--font-main, 'Manrope');
-    font-weight: 400;
+    font-weight: regular;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -100,7 +100,7 @@
     font-size: 13px;
     line-height: 20px;
     font-family: var(--font-main, 'Manrope');
-    font-weight: 700;
+   font-weight: bold;
     cursor: pointer;
     transition: all 0.2s;
     white-space: nowrap;

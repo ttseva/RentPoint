@@ -1,10 +1,10 @@
 import React from 'react';
 import { Chat } from '../components/Chat/Chat';
-import './ChatsPage.css';
+import './ChatPage.css';
 
-export const ChatsPage: React.FC = () => {
+export const ChatPage: React.FC = () => {
     return (
-        <div className="chats-page">
+        <div className="chat-page">
             <Chat />
         </div>
     );
