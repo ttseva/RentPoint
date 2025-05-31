@@ -12,7 +12,7 @@
 
 .rent-out__title {
   font-family: var(--font-main);
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-title);
  font-weight: bold;
   color: var(--color-text);
   margin: 0 0 var(--spacing-xl) 0;

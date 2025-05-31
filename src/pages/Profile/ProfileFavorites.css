@@ -1,0 +1,29 @@
+.profile-favorites {
+    padding: var(--spacing-xl) 0;
+}
+
+.profile-favorites__header {
+    margin-bottom: var(--spacing-xl);
+}
+
+.profile-favorites__title {
+    font-family: var(--font-main);
+    font-size: var(--font-size-title);
+    font-weight: bold;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.profile-favorites__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.profile-favorites__empty {
+    text-align: center;
+    color: var(--color-subtext);
+    padding: var(--spacing-xl) 0;
+    font-family: var(--font-main);
+    font-size: var(--font-size-md);
+} 

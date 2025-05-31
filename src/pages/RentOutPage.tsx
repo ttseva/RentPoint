@@ -73,6 +73,20 @@ const validateAddress = (address: string): AddressValidation => {
   };
 };
 
+const validatePrice = (price: string): string | undefined => {
+  const numPrice = Number(price);
+  if (numPrice <= 0) {
+    return 'Цена должна быть больше 0';
+  }
+  if (numPrice < 1000) {
+    return 'Уверены, что цена верная?..';
+  }
+  if (price.startsWith('0') && price !== '0') {
+    return 'Кажется, Ваша цена начинается с нуля...';
+  }
+  return undefined;
+};
+
 export const RentOutPage: React.FC = () => {
   const [formData, setFormData] = useState<RentOutForm>({
     type: '',
@@ -86,6 +100,7 @@ export const RentOutPage: React.FC = () => {
   });
 
   const [addressError, setAddressError] = useState<string>();
+  const [priceError, setPriceError] = useState<string>();
 
   const handleChange = (field: keyof RentOutForm) => (value: string) => {
     setFormData(prev => ({
@@ -93,9 +108,11 @@ export const RentOutPage: React.FC = () => {
       [field]: value,
     }));
 
-    // Сбрасываем ошибку адреса при изменении
     if (field === 'address') {
       setAddressError(undefined);
+    }
+    if (field === 'price') {
+      setPriceError(undefined);
     }
   };
 
@@ -103,6 +120,12 @@ export const RentOutPage: React.FC = () => {
     const validation = validateAddress(formData.address);
     setAddressError(validation.error);
     return validation.isValid;
+  };
+
+  const validatePriceField = () => {
+    const error = validatePrice(formData.price);
+    setPriceError(error);
+    return !error;
   };
 
   const handleImagesSelected = (files: File[]) => {
@@ -116,7 +139,9 @@ export const RentOutPage: React.FC = () => {
     e.preventDefault();
     
     const isAddressValid = validateAddressField();
-    if (!isAddressValid) {
+    const isPriceValid = validatePriceField();
+    
+    if (!isAddressValid || !isPriceValid) {
       return;
     }
 
@@ -196,6 +221,8 @@ export const RentOutPage: React.FC = () => {
             placeholder="60000"
             value={formData.price}
             onChange={handleChange('price')}
+            onBlur={validatePriceField}
+            error={priceError}
           />
 
           <ImageUpload onImagesSelected={handleImagesSelected} />

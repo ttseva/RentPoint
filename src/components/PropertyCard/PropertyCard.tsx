@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BasePropertyCard } from './BasePropertyCard';
 import likeIcon from '../../assets/images/like-icon.svg';
 import likeIconActive from '../../assets/images/like-icon__active.svg';
 import messageIcon from '../../assets/images/mail-icon.svg';
+import { addToFavorites, removeFromFavorites, isInFavorites } from '../../utils/favorites';
 
 interface PropertyAddress {
     city: string;
@@ -30,6 +31,7 @@ interface PropertyCardProps {
 export const PropertyCard: React.FC<PropertyCardProps> = (props) => {
     const [isLiked, setIsLiked] = useState(false);
     const {
+        id,
         onLikeClick,
         onMessageClick,
         onDetailsClick,
@@ -37,13 +39,23 @@ export const PropertyCard: React.FC<PropertyCardProps> = (props) => {
         ...baseProps
     } = props;
 
+    useEffect(() => {
+        setIsLiked(isInFavorites(id));
+    }, [id]);
+
     const handleFavoriteClick = () => {
-        setIsLiked(!isLiked);
+        const newIsLiked = !isLiked;
+        setIsLiked(newIsLiked);
+        if (newIsLiked) {
+            addToFavorites(id);
+        } else {
+            removeFromFavorites(id);
+        }
         onLikeClick?.();
     };
 
     return (
-        <BasePropertyCard {...baseProps}>
+        <BasePropertyCard {...baseProps} id={id}>
             {isInChat ? (
                 <button
                     type="button"

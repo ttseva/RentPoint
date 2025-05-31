@@ -11,7 +11,7 @@
 
 .profile-title {
   font-size: 32px;
-  font-weight: 500;
+  font-weight: bold;
   margin: 0 0 24px;
   color: var(--color-text, #0d0f1c);
 }

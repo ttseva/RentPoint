@@ -17,35 +17,35 @@ export const MOCK_CHATS: Chat[] = [
             description: 'Светлая просторная квартира с современным ремонтом',
             yearOfBuilding: 2019,
             address: ['Москва', 'Митинская улица, 27к1'],
-            photos: ['https://picsum.photos/seed/apartment1/600/400'],
+            photos: ['https://images.unsplash.com/photo-1484154218962-a197022b5858?w=500'],
         },
         messages: [
             {
                 id: '1',
                 text: 'Здравствуйте! Интересует ваша квартира на Митинской улице.',
                 senderId: 'currentUser',
-                timestamp: Date.now() - 86400000, // 24 часа назад
+                timestamp: Date.now() - 86400000, 
                 isOwn: true
             },
             {
                 id: '2',
-                text: 'Добрый день! Да, квартира свободна. Когда бы вы хотели посмотреть?',
+                text: 'Добрый день! Да, квартира свободна. Когда бы Вы хотели подъехать на просмотр?',
                 senderId: 'user1',
-                timestamp: Date.now() - 82800000, // 23 часа назад
+                timestamp: Date.now() - 82800000,
                 isOwn: false
             },
             {
                 id: '3',
-                text: 'Можно завтра во второй половине дня?',
+                text: 'Возможно завтра во второй половине дня?',
                 senderId: 'currentUser',
-                timestamp: Date.now() - 79200000, // 22 часа назад
+                timestamp: Date.now() - 79200000, 
                 isOwn: true
             },
             {
                 id: '4',
-                text: 'Да, давайте в 15:00. Я вышлю адрес для просмотра.',
+                text: 'Хорошо, давайте после 15',
                 senderId: 'user1',
-                timestamp: Date.now() - 75600000, // 21 час назад
+                timestamp: Date.now() - 75600000, 
                 isOwn: false
             }
         ],
@@ -60,9 +60,9 @@ export const MOCK_CHATS: Chat[] = [
         messages: [
             {
                 id: '1',
-                text: 'Приветствуем! Отправьте тестовое сообщение, и мы постараемся ответить в течение нескольких минут.',
+                text: 'Приветствуем! Отправьте сообщение, но, правда, мы его не получим!',
                 senderId: 'support',
-                timestamp: Date.now() - 7200000, // 2 часа назад
+                timestamp: Date.now() - 7200000,
                 isOwn: false
             }
         ],
